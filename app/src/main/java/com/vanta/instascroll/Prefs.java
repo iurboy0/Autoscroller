@@ -10,8 +10,16 @@ public class Prefs {
         return ctx.getSharedPreferences(NAME, Context.MODE_PRIVATE);
     }
 
+    public static boolean isEnabled(Context ctx) {
+        return get(ctx).getBoolean("enabled", true);
+    }
+
+    public static void setEnabled(Context ctx, boolean v) {
+        get(ctx).edit().putBoolean("enabled", v).apply();
+    }
+
     public static int getDelay(Context ctx) {
-        return get(ctx).getInt("delay", 150);
+        return get(ctx).getInt("delay", 30);
     }
 
     public static void setDelay(Context ctx, int v) {
