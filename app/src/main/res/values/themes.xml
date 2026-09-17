@@ -1,0 +1,9 @@
+<resources>
+    <style name="Theme.VantaScroll" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#6B5BFF</item>
+        <item name="colorPrimaryVariant">#4B3BDF</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="android:windowBackground">#0A0A0F</item>
+        <item name="android:statusBarColor">#0A0A0F</item>
+    </style>
+</resources>
