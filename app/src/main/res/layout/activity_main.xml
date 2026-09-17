@@ -1,15 +1,88 @@
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:max="450"
-            android:progress="100"
-            android:layout_marginBottom="24dp" />
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A0F"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Swipe length"
+            android:text="VANTA SCROLL"
             android:textColor="#FFFFFF"
-            android:textSize="15sp"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Effortless chat navigation"
+            android:textColor="#8B95A5"
+            android:textSize="14sp"
+            android:layout_marginBottom="32dp" />
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#14141C"
+            android:padding="20dp"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:text="Service Offline"
+            android:layout_marginBottom="20dp" />
+
+        <Button
+            android:id="@+id/enableButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="ACTIVATE SERVICE"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:backgroundTint="#6B5BFF"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="32dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SCROLL SPEED"
+            android:textColor="#8B95A5"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/speedValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="150 ms"
+            android:textColor="#6B5BFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <SeekBar
+            android:id="@+id/speedSeek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="450"
+            android:progress="100"
+            android:layout_marginBottom="32dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SWIPE DISTANCE"
+            android:textColor="#8B95A5"
+            android:textSize="12sp"
+            android:textStyle="bold"
             android:layout_marginBottom="8dp" />
 
         <TextView
@@ -18,8 +91,9 @@
             android:layout_height="wrap_content"
             android:text="45%"
             android:textColor="#6B5BFF"
-            android:textSize="14sp"
-            android:layout_marginBottom="4dp" />
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
 
         <SeekBar
             android:id="@+id/lenSeek"
@@ -27,47 +101,63 @@
             android:layout_height="wrap_content"
             android:max="60"
             android:progress="45"
-            android:layout_marginBottom="24dp" />
+            android:layout_marginBottom="32dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Direction"
-            android:textColor="#FFFFFF"
-            android:textSize="15sp"
-            android:layout_marginBottom="8dp" />
+            android:text="DIRECTION"
+            android:textColor="#8B95A5"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
 
         <RadioGroup
             android:id="@+id/dirGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginBottom="24dp">
+            android:layout_marginBottom="32dp">
 
             <RadioButton
                 android:id="@+id/dirOlder"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Purane messages (upar)"
+                android:text="Older messages"
                 android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:paddingStart="8dp"
+                android:paddingBottom="12dp"
                 android:checked="true" />
 
             <RadioButton
                 android:id="@+id/dirNewer"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Naye messages (neeche)"
-                android:textColor="#FFFFFF" />
+                android:text="Newer messages"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:paddingStart="8dp" />
         </RadioGroup>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#14141C"
-            android:padding="16dp"
+            android:padding="20dp"
             android:textColor="#8B95A5"
             android:textSize="13sp"
-            android:text="Kaise use karo:\n1. Enable Accessibility Service\n2. Vanta Scroll ko ON karo\n3. Instagram chat kholo\n4. Volume Up = scroll shuru\n5. Volume Down = ruk jao" />
+            android:text="HOW TO USE\n\n1. Activate the service above\n2. Open any chat\n3. Volume Up - start auto-scroll\n4. Volume Down - stop instantly" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="VANTA SCROLL  v1.0"
+            android:textColor="#3A3A52"
+            android:textSize="10sp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp" />
 
     </LinearLayout>
 </ScrollView>
