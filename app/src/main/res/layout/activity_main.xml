@@ -25,25 +25,36 @@
             android:text="Effortless chat navigation"
             android:textColor="#8B95A5"
             android:textSize="14sp"
-            android:layout_marginBottom="32dp" />
+            android:layout_marginBottom="24dp" />
+
+        <Switch
+            android:id="@+id/masterSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Auto-Scroll Active"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:padding="20dp"
+            android:background="#14141C"
+            android:layout_marginBottom="12dp" />
 
         <TextView
             android:id="@+id/statusText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#14141C"
-            android:padding="20dp"
+            android:padding="16dp"
             android:textColor="#FFFFFF"
-            android:textSize="14sp"
+            android:textSize="13sp"
             android:text="Service Offline"
             android:layout_marginBottom="20dp" />
 
         <Button
             android:id="@+id/enableButton"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:text="ACTIVATE SERVICE"
-            android:textSize="14sp"
+            android:layout_height="52dp"
+            android:text="ACTIVATE SERVICE (one time)"
+            android:textSize="12sp"
             android:textStyle="bold"
             android:backgroundTint="#6B5BFF"
             android:textColor="#FFFFFF"
@@ -62,7 +73,7 @@
             android:id="@+id/speedValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="150 ms"
+            android:text="30 ms"
             android:textColor="#6B5BFF"
             android:textSize="22sp"
             android:textStyle="bold"
@@ -72,8 +83,8 @@
             android:id="@+id/speedSeek"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:max="450"
-            android:progress="100"
+            android:max="195"
+            android:progress="25"
             android:layout_marginBottom="32dp" />
 
         <TextView
@@ -147,13 +158,13 @@
             android:padding="20dp"
             android:textColor="#8B95A5"
             android:textSize="13sp"
-            android:text="HOW TO USE\n\n1. Activate the service above\n2. Open any chat\n3. Volume Up - start auto-scroll\n4. Volume Down - stop instantly" />
+            android:text="HOW TO USE\n\n1. Activate service once (Android requires this)\n2. Toggle Auto-Scroll from here anytime\n3. Volume Up - start scrolling\n4. Volume Down - stop instantly" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="VANTA SCROLL  v1.0"
+            android:text="VANTA SCROLL  v1.1"
             android:textColor="#3A3A52"
             android:textSize="10sp"
             android:layout_marginTop="32dp"
