@@ -73,7 +73,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        statusText.setText(isServiceOn() ? "Service: ON ✓" : "Service: OFF");
+        if (isServiceOn()) {
+            statusText.setText("●  Service Online");
+            statusText.setTextColor(0xFF22C55E);
+        } else {
+            statusText.setText("●  Service Offline");
+            statusText.setTextColor(0xFFFF3B6B);
+        }
     }
 
     private boolean isServiceOn() {
