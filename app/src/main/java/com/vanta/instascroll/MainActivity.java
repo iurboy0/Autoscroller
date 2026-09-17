@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.widget.RadioButton;
 import android.widget.SeekBar;
+import android.widget.Switch;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView statusText;
     private TextView speedValue;
     private TextView lenValue;
+    private Switch masterSwitch;
 
     @Override
     protected void onCreate(Bundle b) {
@@ -22,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         statusText = findViewById(R.id.statusText);
         speedValue = findViewById(R.id.speedValue);
         lenValue = findViewById(R.id.lenValue);
+        masterSwitch = findViewById(R.id.masterSwitch);
         SeekBar speedSeek = findViewById(R.id.speedSeek);
         SeekBar lenSeek = findViewById(R.id.lenSeek);
         RadioButton dirOlder = findViewById(R.id.dirOlder);
@@ -31,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         int length = Prefs.getLengthPct(this);
         int dir = Prefs.getDirection(this);
 
-        speedSeek.setProgress(Math.max(0, delay - 50));
+        speedSeek.setProgress(Math.max(0, delay - 5));
         speedValue.setText(delay + " ms");
 
         lenSeek.setProgress(length);
@@ -40,9 +43,12 @@ public class MainActivity extends AppCompatActivity {
         if (dir == 0) dirOlder.setChecked(true);
         else dirNewer.setChecked(true);
 
+        masterSwitch.setChecked(Prefs.isEnabled(this));
+        masterSwitch.setOnCheckedChangeListener((v, c) -> Prefs.setEnabled(MainActivity.this, c));
+
         speedSeek.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             public void onProgressChanged(SeekBar s, int p, boolean f) {
-                int v = p + 50;
+                int v = p + 5;
                 speedValue.setText(v + " ms");
                 Prefs.setDelay(MainActivity.this, v);
             }
@@ -74,10 +80,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         if (isServiceOn()) {
-            statusText.setText("●  Service Online");
+            statusText.setText("Service Online - Scroll is ready");
             statusText.setTextColor(0xFF22C55E);
         } else {
-            statusText.setText("●  Service Offline");
+            statusText.setText("Service Offline - Activate once below");
             statusText.setTextColor(0xFFFF3B6B);
         }
     }
