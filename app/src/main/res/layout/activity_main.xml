@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A0F"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vanta Scroll"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Volume keys se chat scroll karo"
+            android:textColor="#8B95A5"
+            android:textSize="14sp"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#14141C"
+            android:padding="16dp"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:text="Service: OFF"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/enableButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enable Accessibility Service"
+            android:backgroundTint="#6B5BFF"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Speed (chhoti value = tez)"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/speedValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="150 ms"
+            android:textColor="#6B5BFF"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+        <SeekBar
+            android:id="@+id/speedSeek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="450"
+            android:progress="100"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Swipe length"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/lenValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="45%"
+            android:textColor="#6B5BFF"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+        <SeekBar
+            android:id="@+id/lenSeek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="60"
+            android:progress="45"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Direction"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:layout_marginBottom="8dp" />
+
+        <RadioGroup
+            android:id="@+id/dirGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp">
+
+            <RadioButton
+                android:id="@+id/dirOlder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Purane messages (upar)"
+                android:textColor="#FFFFFF"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/dirNewer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Naye messages (neeche)"
+                android:textColor="#FFFFFF" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#14141C"
+            android:padding="16dp"
+            android:textColor="#8B95A5"
+            android:textSize="13sp"
+            android:text="Kaise use karo:\n1. Enable Accessibility Service\n2. Vanta Scroll ko ON karo\n3. Instagram chat kholo\n4. Volume Up = scroll shuru\n5. Volume Down = ruk jao" />
+
+    </LinearLayout>
+</ScrollView>
