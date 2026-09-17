@@ -23,6 +23,8 @@ public class ScrollAccessibilityService extends AccessibilityService {
     @Override
     public boolean onKeyEvent(KeyEvent event) {
         if (event.getAction() != KeyEvent.ACTION_DOWN) return false;
+        if (!Prefs.isEnabled(this)) return false;
+
         int code = event.getKeyCode();
 
         if (code == KeyEvent.KEYCODE_VOLUME_UP) {
@@ -59,7 +61,7 @@ public class ScrollAccessibilityService extends AccessibilityService {
     private void performSwipe() {
         int direction = Prefs.getDirection(this);
         int lengthPct = Prefs.getLengthPct(this);
-        int duration = Math.max(50, Prefs.getDelay(this) / 2);
+        int duration = Math.max(20, Prefs.getDelay(this) / 2);
 
         int screenH = getResources().getDisplayMetrics().heightPixels;
         int screenW = getResources().getDisplayMetrics().widthPixels;
